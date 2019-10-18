@@ -28,4 +28,9 @@ class PostsController extends Controller
         // $post = Post::findOrFail($id); // Implicit Bindingの場合はいらない
         return view('posts.show')->with('post', $post);
     }
+
+    public function create()
+    {
+        return view('posts.create');
+    }
 }

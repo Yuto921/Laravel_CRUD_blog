@@ -14,4 +14,6 @@
 Route::get('/', 'PostsController@index');
 
 // Route::get('/posts/{id}', 'PostsController@show');
-Route::get('/posts/{post}', 'PostsController@show'); // Implicit Binding
+Route::get('/posts/{post}', 'PostsController@show')->where('post', '[0-9]+'); // Implicit Binding
+
+Route::get('/posts/create', 'PostsController@create');
